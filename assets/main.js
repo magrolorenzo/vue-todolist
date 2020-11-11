@@ -10,6 +10,8 @@ var app = new Vue({
 
     data:{
 
+        todo: "",
+
         todos: [
             "Fare la spesa",
             "Stendere",
@@ -22,8 +24,15 @@ var app = new Vue({
     },
 
     methods: {
-        add(new_todo){
-            this.todos.push(new_todo);
+        add(){
+            if(this.todo != ""){
+                this.todos.push(this.todo);
+            }
+        },
+
+        remove(position){
+            // Rimuovere l'elemento dell array corrispondente alla posizione index
+            this.todos.splice(position, 1);
         }
     }
 });
