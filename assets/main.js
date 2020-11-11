@@ -20,4 +20,10 @@ var app = new Vue({
         ]
 
     },
+
+    methods: {
+        add(new_todo){
+            this.todos.push(new_todo);
+        }
+    }
 });
