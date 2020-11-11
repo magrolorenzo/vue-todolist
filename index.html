@@ -15,8 +15,8 @@
             <div class="container">
                 <div class="wrapper">
                     <div class="add_todo">
-                        <input type="text" placeholder="Inserire un nuovo todo" v-model="todo" id="todo_input">
-                        <button type="button" name="button" @click="add">Aggiungi</button>
+                        <input type="text" placeholder="Inserire un nuovo todo" v-model="todo" id="todo_input" @keyup.enter="add">
+                        <button type="button" name="button" @click="add" >Aggiungi</button>
                     </div>
                     <ul class="todo_list">
                         <li class="list_item" v-for="(action, index) in todos" @click="remove(index)">- {{action}}</li>
